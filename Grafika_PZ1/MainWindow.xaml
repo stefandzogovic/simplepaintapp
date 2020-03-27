@@ -5,8 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Grafika_PZ1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="PZ1" Height="450" Width="568">
+
     <Grid>
-        
+        <Grid.CommandBindings>
+            <CommandBinding Executed="Button_Click_Undo" Command="ApplicationCommands.Undo"/>
+            <CommandBinding Executed="Button_Click_Redo" Command="ApplicationCommands.Redo"/>
+        </Grid.CommandBindings>
+        <DockPanel Grid.Row="0">
+            <WrapPanel Background="Blue" DockPanel.Dock="Top" Margin="0,0,-0.4,0">
+                <Button Margin="12, 0 , 12, 0" FontSize="13" Name="Elipse" Width="60" Height="27" Click="Button_Click">
+                    <TextBlock Text="Elipse" Margin="0,-4,0,0"/>
+                </Button>
+                <Button FontSize="13" Name="Rectangle" Width="60" Height="27" Click="Button_Click" RenderTransformOrigin="0.24,0.694">
+                    <TextBlock Text="Rectangle" Margin="0,-4,0,0"/>
+                </Button>
+                <Button Margin="12, 0, 0, 0" FontSize="13" Name="Polygon" Width="60" Height="27" Click="Button_Click" RenderTransformOrigin="0.24,0.694">
+                    <TextBlock Text="Polygon" Margin="0,-4,0,0"/>
+                </Button>
+                <Button Margin="12, 0, 0, 0" FontSize="13" Name="Image" Width="60" Height="27" Click="Button_Click" RenderTransformOrigin="0.24,0.694">
+                    <TextBlock Text="Image" Margin="0,-4,0,0"/>
+                </Button>
+                <Button Margin="12, 0, 0, 0" FontSize="13" Name="Undo"  Width="60" Height="27" Click="Button_Click_Undo" RenderTransformOrigin="0.24,0.694">
+                    <TextBlock Text="Undo" Margin="0,-4,0,0"/>
+                </Button>
+                <Button Margin="12, 0, 0, 0" FontSize="13" Name="Redo" Width="60" Height="27" Click="Button_Click_Redo" RenderTransformOrigin="0.24,0.694">
+                    <TextBlock Text="Redo" Margin="0,-4,0,0"/>
+                </Button>
+                <Button Margin="12, 0, 0, 0" FontSize="13" Name="Clear" Width="60" Height="27" Click="Button_Click_Clear" RenderTransformOrigin="0.24,0.694">
+                    <TextBlock Text="Clear" Margin="0,-4,0,0"/>
+                </Button>
+            </WrapPanel>
+            <StackPanel></StackPanel>
+        </DockPanel>
+
+        <Canvas Name="MyCanvas" ClipToBounds="True" Background="Transparent" PreviewMouseMove="MyCanvas_PreviewMouseMove" MouseLeftButtonDown="MyCanvas_MouseLeftButtonDown" MouseRightButtonDown="Canvas_PreviewMouseRightButtonDown" Margin="0,27,-0.4,0"/>
     </Grid>
+
 </Window>

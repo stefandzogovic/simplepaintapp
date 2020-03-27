@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Grafika_PZ1.Properties
+namespace UndoRedo.Properties
 {
 
 

@@ -1,0 +1,29 @@
+﻿<Window x:Class="Grafika_PZ1.ElipseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grafika_PZ1"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStartupLocation="Manual"
+        Title="Elipse Window" Height="304.207" Width="282.021">
+    
+
+    <Grid>
+        <TextBox TextChanged="TextChanged" Text="1" Name="Width"   VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="29" Margin="154,24,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="94"/>
+        <TextBox  TextChanged="TextChanged" Text="1"  Name="Height"  VerticalContentAlignment="Center"  HorizontalAlignment="Left" Height="29" Margin="154,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <TextBox TextChanged="TextChanged1" Text="1" Name="BorderThickness" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="29" Margin="154,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <ComboBox VerticalContentAlignment="Center" Name="FillColor" HorizontalAlignment="Left" Height="29" Margin="154,93,0,0" VerticalAlignment="Top" Width="94" SelectionChanged="FillColor_SelectionChanged"/>
+        <ComboBox VerticalContentAlignment="Center"  Name="BorderColor" HorizontalAlignment="Left" Height="29" Margin="154,127,0,0" VerticalAlignment="Top" Width="94" SelectionChanged="BorderColor_SelectionChanged" />
+        <Button Name="DrawBtn" Content="Draw" HorizontalAlignment="Left" Height="28" Margin="154,216,0,0" VerticalAlignment="Top" Width="94"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="28" Margin="28,216,0,0" VerticalAlignment="Top" Width="94" Click="ButtonCancel"/>
+        <Label Content="Width:" HorizontalAlignment="Left" Height="29" Margin="28,24,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label Content="Border Thickness:" HorizontalAlignment="Left" Height="28" Margin="28,161,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label Content="Border Color:" HorizontalAlignment="Left" Height="29" Margin="28,127,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label Content="FIll Color:" HorizontalAlignment="Left" Height="29" Margin="28,93,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Height="29" Margin="28,59,0,0" VerticalAlignment="Top" Width="94"/>
+        <Rectangle Name="FillColorRect" HorizontalAlignment="Left" Height="29" Margin="122,93,0,0" Stroke="Black" StrokeThickness="0.3"  VerticalAlignment="Top" Width="27"/>
+        <Rectangle Name="BorderColorRect" HorizontalAlignment="Left" Height="29" Margin="122,127,0,0" Stroke="Black" StrokeThickness="0.3"  VerticalAlignment="Top" Width="27"/>
+    </Grid>
+</Window>
